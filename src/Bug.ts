@@ -13,7 +13,7 @@ export class Bug {
     this.pupuls = addEyes(this.container);
     this.container.rotation = direction;
     this.speed = speed;
-    document.addEventListener("keydown", this.keyDownHandler);
+    document.addEventListener("keydown", this.keyDownHandler.bind(this));
   }
   private keyDownHandler(e: KeyboardEvent) {
     if (e.key == "ArrowLeft") {
